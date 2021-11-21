@@ -22,6 +22,9 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
   line-height: 1.7;
+  background-image: url('./assets/bg-main-desktop.png');
+  background-size: cover;
+  min-height: 100vh;
 
   &.smaller {
     font-size: 16px;
@@ -29,16 +32,50 @@ body {
   }
 }
 
+header {
+  background-image: url('./assets/bg-pattern-1.svg');
+  background-size: 200px 270px;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  min-height: 25vh;
+  padding: 1rem;
+  margin-bottom: -6rem;
+}
+
 h1 {
+  display: inline-block;
+  width: min-content;
   font-size: 88px;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
+  margin-top: -1rem;
 }
 
 h2 {
   font-size: 40px;
   line-height: 1.3;
+}
+
+.cta {
+  background-color: var(--clr-dark);
+  background-image: url('./assets/bg-pattern-2.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  border-radius: 12px;
+
+  &--image {
+    width: 312px;
+    height: 642px;
+  }
+
+  &--card {
+    max-width: 445px;
+    margin-left: auto;
+    border-radius: 12px;
+    background-color: var(--clr-tomato-red);
+  }
 }
 
 button {
@@ -50,4 +87,45 @@ button {
   background-color: var(--bg-color);
 
   width: 333px;
+}
+
+footer > * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .logo {
+    width: 146px;
+    height: 32px;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--clr-dark);
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.social-media-links {
+  display: flex;
+  gap: 0.75rem;
+  img {
+    height: 20px;
+    aspect-ratio: 1;
+  }
+}
+
+.flow > * + * {
+  margin-bottom: 2rem;
 }
