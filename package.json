@@ -1,0 +1,16 @@
+{
+  "name": "equalizer-landing-page",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Challenge",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "Barry Hanna",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}
