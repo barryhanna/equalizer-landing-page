@@ -25,6 +25,7 @@ body {
   background-image: url('./assets/bg-main-desktop.png');
   background-size: cover;
   min-height: 100vh;
+  margin-bottom: 4rem;
 }
 
 header {
@@ -82,21 +83,21 @@ main {
     width: 312px;
     height: 642px;
 
-    margin-top: -25%;
+    margin-top: -20%;
     margin-left: 10%;
   }
 
   &--card {
     position: absolute;
-    min-width: 500px;
-    max-width: 510px;
+    min-width: 400px;
+    max-width: 450px;
     margin-left: auto;
     border-radius: 12px;
     background-color: var(--clr-tomato-red);
     padding: 2rem;
     top: 30%;
-    left: 50%;
-    margin-right: 5%;
+    left: 55%;
+    margin-right: 10%;
 
     color: var(--clr-white);
   }
@@ -166,6 +167,7 @@ footer > * {
   padding: 1rem;
 
   .logo {
+    align-self: flex-start;
     width: 146px;
     height: 32px;
   }
