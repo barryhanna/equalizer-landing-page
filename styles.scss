@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: 1px solid crimson;
 }
 
 :root {
@@ -36,6 +37,14 @@ header {
   min-height: 38vh;
   padding: 1rem;
   margin-bottom: -18rem;
+
+  @media (max-width: 965px) {
+    background-position: 115% -40px;
+  }
+
+  @media (max-width: 850px) {
+    background-image: none;
+  }
 }
 
 h1 {
@@ -46,6 +55,10 @@ h1 {
   letter-spacing: -1px;
   line-height: 1;
   margin-top: -1rem;
+
+  @media (max-width: 850px) {
+    width: 100%;
+  }
 }
 
 h2 {
@@ -64,6 +77,18 @@ main {
   p {
     max-width: 70ch;
     padding-block: 1rem;
+
+    @media (max-width: 1120px) {
+      max-width: 60ch;
+    }
+
+    @media (max-width: 1000px) {
+      max-width: 60%;
+    }
+
+    @media (max-width: 850px) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -79,27 +104,55 @@ main {
 
   border-radius: 12px;
 
+  @media (max-width: 700px) {
+    height: calc(100% - 300px);
+  }
+
   &--image {
     width: 312px;
     height: 642px;
 
     margin-top: -20%;
     margin-left: 10%;
+
+    @media (max-width: 700px) {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+      margin-top: -15rem;
+      max-width: 80%;
+      height: auto;
+    }
   }
 
   &--card {
     position: absolute;
-    min-width: 400px;
-    max-width: 450px;
+    width: 400px;
     margin-left: auto;
     border-radius: 12px;
     background-color: var(--clr-tomato-red);
     padding: 2rem;
     top: 30%;
     left: 55%;
-    margin-right: 10%;
-
     color: var(--clr-white);
+
+    @media (max-width: 1060px) {
+      left: 50%;
+    }
+
+    @media (max-width: 950px) {
+      left: 40%;
+    }
+
+    @media (max-width: 800px) {
+      left: 30%;
+      margin-right: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      position: static;
+      margin: auto;
+    }
   }
 
   &--price {
@@ -165,6 +218,7 @@ footer > * {
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
+  flex-wrap: wrap;
 
   .logo {
     align-self: flex-start;
@@ -185,9 +239,24 @@ footer > * {
   }
 }
 
+.footer--text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+
+  @media (max-width: 590px) {
+    width: 100%;
+  }
+}
+
 .wrapper {
   max-width: 1110px;
   margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    margin: 0 2rem;
+  }
 }
 
 .social-media-links {
