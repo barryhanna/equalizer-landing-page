@@ -20,7 +20,7 @@ html {
 
 body {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
   background-image: url('./assets/bg-main-desktop.png');
   background-size: cover;
@@ -34,18 +34,18 @@ body {
 
 header {
   background-image: url('./assets/bg-pattern-1.svg');
-  background-size: 200px 270px;
+  background-size: 312px 468px;
   background-repeat: no-repeat;
-  background-position: 100% 0;
-  min-height: 25vh;
+  background-position: 100% -40px;
+  min-height: 38vh;
   padding: 1rem;
-  margin-bottom: -6rem;
+  margin-bottom: -18rem;
 }
 
 h1 {
   display: inline-block;
-  width: min-content;
-  font-size: 88px;
+  width: 20ch;
+  font-size: 58px;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
@@ -64,6 +64,10 @@ main {
 
 .hero {
   margin-bottom: 15rem;
+
+  p {
+    margin-top: 4rem;
+  }
 }
 
 .cta {
@@ -72,7 +76,7 @@ main {
   background-image: url('./assets/bg-pattern-2.svg');
   background-repeat: no-repeat;
   background-size: 312px 468px;
-  background-position: center;
+  background-position: center top;
 
   height: 600px;
 
@@ -88,13 +92,14 @@ main {
 
   &--card {
     position: absolute;
-    max-width: 500px;
+    min-width: 500px;
+    max-width: 510px;
     margin-left: auto;
     border-radius: 12px;
     background-color: var(--clr-tomato-red);
     padding: 2rem;
     top: 30%;
-    left: 60%;
+    left: 50%;
     margin-right: 5%;
 
     color: var(--clr-white);
@@ -122,6 +127,7 @@ button {
   gap: 0.5rem;
 
   font-family: inherit;
+  font-weight: bold;
   border-radius: 12px;
   border: none;
   color: var(--color);
@@ -130,16 +136,30 @@ button {
   width: 100%;
   letter-spacing: -0.18px;
   line-height: 1.8;
+  cursor: pointer;
 
-  img {
-    width: 16px;
-    height: 18px;
+  svg {
+    fill: var(--color);
   }
-}
 
-.android {
-  --bg-color: var(--clr-white);
-  --color: var(--clr-dark);
+  &:hover {
+    --bg-color: var(--clr-aqua-blue);
+  }
+
+  &.android {
+    --bg-color: var(--clr-white);
+    --color: var(--clr-dark);
+
+    svg {
+      fill: var(--color);
+    }
+
+    &:hover {
+      --bg-color: var(--clr-yellow);
+      --color: var(--clr-dark);
+      fill: var(--color);
+    }
+  }
 }
 
 footer > * {
@@ -163,6 +183,7 @@ footer > * {
   p {
     font-size: 16px;
     line-height: 1.6;
+    max-width: 40ch;
   }
 }
 
@@ -174,9 +195,14 @@ footer > * {
 .social-media-links {
   display: flex;
   gap: 0.75rem;
-  img {
+  svg {
     height: 20px;
     aspect-ratio: 1;
+    cursor: pointer;
+
+    &:hover {
+      fill: var(--clr-tomato-red);
+    }
   }
 }
 
